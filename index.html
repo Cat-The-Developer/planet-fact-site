@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.min.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<title>Planet Fact Site</title>
+</head>
+
+<body>
+
+  <nav class="navbar" data-aos="fade-down">
+    <span class="navbar_brand">THE PLANETS</span>
+    <ul class="pc_navLinks">
+      <li class="mercuryNAVLINK"><a onclick="mercury()">Mercury</a></li>
+      <li class="venusNAVLINK"><a onclick="venus()">Venus</a></li>
+      <li class="earthNAVLINK active" onclick="earth()"><a>Earth</a></li>
+      <li class="marsNAVLINK" onclick="mars()"><a>Mars</a></li>
+      <li class="jupNAVLINK"><a onclick="jupiter()">Jupiter</a></li>
+      <li class="satNAVLINK"><a onclick="saturn()">Saturn</a></li>
+      <li class="urNAVLINK"><a onclick="uranus()">Uranus</a></li>
+      <li class="neptNAVLINK"><a onclick="neptune()">Neptune</a></li>
+    </ul>
+
+    <button class="mobileToggle" onclick="toggle()"><img src="assets/icon-hamburger.svg" /></button>
+    <ul class="mobile_navLinks">
+      <li><a onclick="mercury()"><img src="assets/planet-mercury.svg" alt="mercury" /> Mercury</a></li>
+      <li><a onclick="venus()"><img src="assets/planet-venus.svg" alt="venus" /> Venus</a></li>
+      <li><a onclick="earth()"><img src="assets/planet-earth.svg" alt="earth" /> Earth</a></li>
+      <li><a onclick="mars()"><img src="assets/planet-mars.svg" alt="mars" /> Mars</a></li>
+      <li><a onclick="jupiter()"><img src="assets/planet-jupiter.svg" alt="jupiter" /> Jupiter</a></li>
+      <li><a onclick="saturn()"><img src="assets/planet-saturn.svg" alt="saturn" /> Saturn</a></li>
+      <li><a onclick="uranus()"><img src="assets/planet-uranus.svg" alt="uranus" /> Uranus</a></li>
+      <li><a onclick="neptune()"><img src="assets/planet-neptune.svg" alt="neptune" /> Neptune</a></li>
+    </ul>
+  </nav>
+
+  <section class="planet_desc">
+    <div class="planet_Image" data-aos="fade-right">
+      <img id="planet_Image_imager" data-aos="zoom-in-up" src="assets/planet-earth.svg" />
+      <img id="overlay" src="" />
+    </div>
+
+    <div class="planet_Text" data-aos="fade-left">
+
+      <div class="test">
+        <h1 id="planet_TITLE" data-aos="flip-up"></h1>
+        <p id="planet_PARA"></p>
+
+        <div class="source">
+          <span>Source:</span>
+          <a class="sourceLINk" href="https://en.wikipedia.org/wiki/Earth">Wikipedia <img
+              src="assets/icon-source.svg" /></a>
+        </div>
+      </div>
+
+      <div class="cards_GROUP">
+        <div class="card earth_OVer active_card"><span class="number">01</span> Overview</div>
+        <div class="card earthInternal"><span class="number">02</span> Internal Structure</div>
+        <div class="card earthGeoLogy"><span class="number">03</span> Surface Geology</div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="stats">
+    <div class="statsGroup">
+      <div class="cardStats">
+        <p>Rotation Time</p>
+        <h3 class="rotateTime"></h3>
+      </div>
+
+      <div class="cardStats">
+        <p>Revolution Time</p>
+        <h3 class="revolveTime"></h3>
+      </div>
+
+      <div class="cardStats">
+        <p>Radius</p>
+        <h3 class="radius"></h3>
+      </div>
+
+      <div class="cardStats">
+        <p>Average Temp.</p>
+        <h3 class="avgTemp"></h3>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.min.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 600,
+      easing: "ease"
+    });
+  </script>
+</body>
+
+</html>

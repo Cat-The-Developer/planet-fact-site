@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100;200;300;400;500;600;700&family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* font-family: 'Antonio', sans-serif;
+font-family: 'League Spartan', sans-serif; */
+
+html, body, * {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #070724;
+  background-image: url('assets/background-stars.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+
+  overflow-x: hidden;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+
+  border: 0px;
+  border-width: 1px;
+  border-style: solid;
+  border-bottom-color: rgba(255, 255, 255, 0.199);
+  border-bottom-width: 1px;
+
+  padding: 1.375rem 2rem 0;
+  background-color: #070724;
+}
+
+.navbar_brand {
+  flex: 1;
+  display: flex;
+  align-items: center;
+
+  color: #fff;
+  font-size: 1.75rem;
+  letter-spacing: -0.065625rem;
+  padding-bottom: 1.6875rem;
+
+  font-family: 'Antonio', sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.pc_navLinks {
+  flex: 1;
+  display: flex;
+  gap: 50px;
+  padding-bottom: 1.6875rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 600;
+  list-style: none;
+}
+
+.pc_navLinks a {
+  text-decoration: none;
+  color: #ffffffc1;
+  letter-spacing: 0.062rem;
+}
+
+.active a {
+  color: #fff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.active a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  border-radius: 20px;
+  background-color: #fff;
+  bottom: -5px;
+}
+
+.planet_desc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2%;
+  padding-top: 100px;
+}
+
+.planet_Image {
+  flex: 1.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+a {
+  cursor: pointer;
+}
+
+.planet_Image img {
+  width: 50%;
+}
+
+.planet_Text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  color: #fff;
+}
+
+.planet_Text h1 {
+  font-size: 5rem;
+  font-family: 'Antonio', sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.planet_Text p {
+  font-family: 'League Spartan', sans-serif;
+  line-height: 1.5;
+  width: 60%;
+  font-size: 18px;
+}
+
+.planet_Text .source {
+  font-family: 'League Spartan', sans-serif;
+  color: #fff;
+  opacity: 50%;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 200;
+}
+
+.planet_Text .source a {
+  font-weight: bold;
+  color: #fff;
+}
+
+.cards_GROUP {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.cards_GROUP .card {
+  padding: 20px 2rem;
+  font-family: 'League Spartan', sans-serif;
+  border: 1px solid #6e2ed592;
+  width: 60%;
+  font-weight: bolder;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.card .number {
+  margin-right: 20px;
+  opacity: 60%;
+}
+
+#overlay {
+  position: absolute;
+  bottom: -8%;
+  width: 15%;
+}
+
+.active_card {
+  background-color: #6d2ed5;
+}
+
+.active_cardMercury {
+  background-color: #419EBB;
+}
+
+.active_cardVenus {
+  background-color: #EDA249;
+}
+
+.active_cardMars {
+  background-color: #D14C32;
+}
+
+.active_cardJupiter {
+  background-color: #D83A34;
+}
+
+.active_cardSaturn {
+  background-color: #CD5120;
+}
+
+.active_cardUranus {
+  background-color: #1EC1A2;
+}
+
+.active_cardNeptune {
+  background-color: #2D68F0;
+}
+
+.statsGroup {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  padding: 12%;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  text-transform: uppercase;
+}
+
+.cardStats {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 1px solid #ffffff70;
+  padding: 20px;
+  width: 18%;
+}
+
+.cardStats p {
+  font-family: 'League Spartan', sans-serif;
+  font-weight: bolder;
+  opacity: 50%;
+  letter-spacing: 1px;
+}
+
+.cardStats h3 {
+  font-family: 'Antonio', sans-serif;
+  font-size: 2rem;
+}
+
+.mobile_navLinks {
+  display: none;
+}
+
+.mobile_navLinks a {
+  color: white;
+}
+
+.mobileToggle {
+  display: none;
+}
+
+.mobile_navLinks {
+  transition: all 0.3s ease-in-out;
+}
+
+.shown {
+  display: flex !important;
+  right: 0 !important;
+}
+
+@media screen and (max-width: 1200px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .planet_desc {
+    flex-direction: column;
+    padding: 5%;
+  }
+
+  .planet_Text {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 50px;
+    margin-top: 100px;
+    align-items: center;
+  }
+
+  .planet_Text .test {
+    flex: 1;
+  }
+
+  #planet_PARA {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  #planet_TITLE {
+    font-size: 3rem;
+  }
+
+  .planet_Text .cards_GROUP {
+    flex: 1;
+  }
+
+  .cards_GROUP .card {
+    width: auto;
+    font-size: 14px;
+  }
+
+  .statsGroup {
+    padding: 5%;
+  }
+
+  .planet_Image {
+    margin-top: 100px;
+  }
+}
+
+.switcher {
+  display: none;
+}
+
+@media screen and (max-width: 705px) {
+
+  .navbar {
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .planet_desc {
+    position: relative;
+  }
+
+  .mobile_navLinks {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    right: -100%;
+    top: 86px;
+    background-color: #070724;
+    width: 50%;
+    z-index: 100;
+    gap: 30px;
+    padding: 10% 5%;
+  }
+
+  .mobile_navLinks li {
+    width: 100%;
+    border-bottom: 1px solid #ffffff70;
+    padding-bottom: 30px;
+    text-transform: uppercase;
+    font-family: 'League Spartan', sans-serif;
+  }
+
+  .mobile_navLinks li a {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+
+  .mobile_navLinks img {
+    width: 22px;
+  }
+  
+  .mobileToggle {
+    display: block;
+    background-color: transparent;
+    border: none;
+    padding-bottom: 1.6875rem;
+  }
+
+  .cards_GROUP {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .pc_navLinks {
+    display: none;
+  }
+
+  .statsGroup {
+    margin: 5%;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .statsGroup .cardStats {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .planet_Text .test {
+    text-align: center;
+  }
+
+  .planet_Text {
+    flex-direction: column;
+  }
+
+  .source {
+    margin-top: 100px;
+  }
+
+  .cardStats p {
+    font-size: 0.7rem;
+  }
+
+  .cardStats h3 {
+    font-size: 1rem;
+  }
+}
